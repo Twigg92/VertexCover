@@ -11,6 +11,7 @@ namespace VertexCover
         static void Main(string[] args)
         {
             Console.WriteLine("Let's get started!");
+            Console.WriteLine("Just another test..");
         }
     }
 }
