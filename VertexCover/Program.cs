@@ -12,6 +12,8 @@ namespace VertexCover
         {
             Console.WriteLine("Let's get started!");
             Console.WriteLine("Just another test..");
+            Console.WriteLine("3rd test..");
+            Console.WriteLine("4th test..");
         }
     }
 }
