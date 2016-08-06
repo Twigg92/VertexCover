@@ -16,10 +16,6 @@ namespace VertexCover
         }
     }
 
-    public class Vertex
-    {
-        
-    }
 
     public class Edge : IEdge<Vertex>
     {

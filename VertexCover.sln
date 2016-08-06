@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VertexCover", "VertexCover\VertexCover.csproj", "{81122A7D-4BDE-4F99-9586-0A1B78DD46A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graph", "Graph", "{7314922B-CF40-4502-A905-8B69D0816F09}"
+	ProjectSection(SolutionItems) = preProject
+		Edge.cs = Edge.cs
+		Graph.cs = Graph.cs
+		Vertex.cs = Vertex.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
