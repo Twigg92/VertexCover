@@ -5,82 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using Graphviz4Net.Graphs;
 using Graphviz4Net.Dot;
+using VertexCover.GraphDefinition;
 
 namespace VertexCover
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Graph<Vertex, Edge> graph = new Graph<Vertex, Edge>();
-        }
-    }
+#if DEBUG
+            Graph graph = new Graph();
+            graph.Vertices = new List<Vertex>();
+            for (int i = 1; i < 10; i++)
+                graph.Vertices.Add(new Vertex() { Value = i });
+            graph.Edges = new List<Edge>();
 
-
-    public class Edge : IEdge<Vertex>
-    {
-        public object Destination
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public object DestinationArrow
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public object DestinationPort
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public object Source
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public object SourceArrow
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public object SourcePort
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        Vertex IEdge<Vertex>.Destination
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        Vertex IEdge<Vertex>.Source
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            for (int i = 0; i < 8; i++)
+                graph.Edges.Add(new Edge() { From = graph.Vertices[i], To = graph.Vertices[i + 1], IsDeleted = i % 2 == 0 });
+            graph.Edges.Add(new Edge() { From = graph.Vertices[graph.Vertices.Count - 1], To = graph.Vertices[0], IsDeleted = false });
+            graph.Visualize();
+#endif
+            Console.ReadKey();
         }
     }
 }

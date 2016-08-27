@@ -1,0 +1,9 @@
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\bin\Release\VertexCover.exe.config
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\bin\Release\VertexCover.exe
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\bin\Release\VertexCover.pdb
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\bin\Release\Antlr3.Runtime.dll
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\bin\Release\Graphviz4Net.dll
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\bin\Release\Antlr3.Runtime.pdb
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\bin\Release\Graphviz4Net.pdb
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\obj\Release\VertexCover.exe
+C:\Users\Paweł\Documents\GitHub\VertexCover\VertexCover\obj\Release\VertexCover.pdb
