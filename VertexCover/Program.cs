@@ -25,6 +25,7 @@ namespace VertexCover
             graph.Edges.Add(new Edge() { From = graph.Vertices[graph.Vertices.Count - 1], To = graph.Vertices[0], IsDeleted = false });
             graph.Visualize();
 #endif
+            Console.WriteLine("Press any key to continue..");
             Console.ReadKey();
         }
     }
