@@ -14,23 +14,23 @@ namespace VertexCover.Algorithm
 
         }
 
-        public void VertexCover(Graph graph, Queue queue, int k)
+        public void VertexCover(Graph graph, /*Queue queue,*/ int k)
         {
-            if (k <= 7)
-            {
-                MetodaSilowa()
-            }
-            else
-            {
-                Reduction();
-                Struktura struktura = WybierzStrukture();
-                if (struktura is 2krotka || struktura is DobraPara || struktura is Vertex)
-                    return min(1 + VertexCover(graph \ {z}, queue + (N(z), 2), k-1), 
-                        d(z) + VertexCover(graph \ N[z], queue, k - d(z)));
-                else 
-                    return min(1 + VertexCover(graph \ {z}, queue, k - 1), 
-                        d(z) + VertexCover(graph \ N[z], queue + (N(u), 2), k - d(z)));
-            }
+            //if (k <= 7)
+            //{
+            //    MetodaSilowa();
+            //}
+            //else
+            //{
+            //    Reduction();
+            //    Struktura struktura = WybierzStrukture();
+            //    if (struktura is 2krotka || struktura is DobraPara || struktura is Vertex)
+            //        return min(1 + VertexCover(graph \ {z}, queue + (N(z), 2), k-1), 
+            //            d(z) + VertexCover(graph \ N[z], queue, k - d(z)));
+            //    else 
+            //        return min(1 + VertexCover(graph \ {z}, queue, k - 1), 
+            //            d(z) + VertexCover(graph \ N[z], queue + (N(u), 2), k - d(z)));
+            //}
             // N(z) - sąsiedztwo
         }
 
