@@ -14,7 +14,9 @@ namespace VertexCover.GraphDefinition
         #region Ctor
         public Graph()
         {
-
+            Vertices = new List<Vertex>();
+            Edges = new List<Edge>();
+            Neighbors = new Edge[][] { };
         }
         #endregion
 
@@ -42,6 +44,23 @@ namespace VertexCover.GraphDefinition
             if (Edges != null && Edges.Count > 0)
                 foreach (var edge in Edges)
                     Console.WriteLine("From: " + edge.From.Value + " To: " + edge.To.Value + " Deleted: " + (edge.IsDeleted ? "Y" : "N"));
+        }
+
+        // Dodaj wierzchołek z określonym sąsiedztwem
+        public void AddVertex(int value, int[] neighbors)
+        {
+            Vertex vertex = new Vertex(value);
+            List<Vertex> neighborsList = new List<Vertex>();
+            foreach (Vertex v in Vertices)
+                if (neighbors.Any(x => x.Equals(v.Value)))
+                {
+                    // stworzenie listy sąsiedztwa i uzupełnienie listy krawędzi
+                    neighborsList.Add(v);
+                    Edges.Add(new Edge(vertex, v));
+                }
+
+            vertex.SetNeighbors(neighborsList);
+            Vertices.Add(vertex);
         }
         #endregion
     }

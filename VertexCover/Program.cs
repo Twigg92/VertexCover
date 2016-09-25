@@ -24,6 +24,14 @@ namespace VertexCover
                 graph.Edges.Add(new Edge() { From = graph.Vertices[i], To = graph.Vertices[i + 1], IsDeleted = i % 2 == 0 });
             graph.Edges.Add(new Edge() { From = graph.Vertices[graph.Vertices.Count - 1], To = graph.Vertices[0], IsDeleted = false });
             graph.Visualize();
+
+            graph = new Graph();
+            graph.AddVertex(1, new int[] { 2, 3 });
+            graph.AddVertex(2, new int[] { 1 });
+            graph.AddVertex(3, new int[] { 1, 2 });
+            graph.AddVertex(4, new int[] { 1 });
+            graph.Visualize();
+
 #endif
             Console.WriteLine("Press any key to continue..");
             Console.ReadKey();

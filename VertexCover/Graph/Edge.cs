@@ -14,6 +14,19 @@ namespace VertexCover.GraphDefinition
         public bool IsDeleted { get; set; }
         #endregion
 
+        #region Ctor
+        public Edge()
+        {
+
+        }
+
+        public Edge(Vertex from, Vertex to)
+        {
+            From = from;
+            To = to;
+        }
+        #endregion
+
         #region Methods
 
         public bool IsCoveredBy(Vertex vertex)
